@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Цифровизация без рутины</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- AOS (Animate On Scroll) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors:{asphalt:'#424242',sky:'#0ea5e9',night:'#1e293b'},
+          keyframes:{
+            gradient:{'0%,100%':{backgroundPosition:'0% 50%'},'50%':{backgroundPosition:'100% 50%'}},
+            pulseSlow:{'0%,100%':{transform:'scale(1)'},'50%':{transform:'scale(1.05)'}}
+          },
+          animation:{gradient:'gradient 15s ease infinite',pulseSlow:'pulseSlow 6s ease-in-out infinite'}
+        }
+      }
+    }
+    document.addEventListener('DOMContentLoaded',()=>AOS.init({once:true,duration:900,easing:'ease-out-quad'}));
+  </script>
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans leading-relaxed">
+  <!-- HERO -->
+  <header class="relative">
+    <div class="absolute inset-0 bg-gradient-to-r from-night via-sky-700 to-sky-500 bg-[length:200%_200%] animate-gradient"></div>
+    <div class="relative max-w-6xl mx-auto px-6 py-24 grid md:grid-cols-2 gap-10 items-center">
+      <div data-aos="fade-right">
+        <h1 class="text-4xl md:text-6xl font-bold mb-4 text-white">Цифровизация</h1>
+        <p class="text-xl mb-6 max-w-md text-gray-200">Slack + Jira — ядро. Мы проектируем workflow, настраиваем интеграции и обучаем команду для <span class="text-sky-200">уборки хаоса</span> и получения живых цифр.</p>
+        <p class="text-sm text-sky-100">С нами вы получаете готовое решение под ключ, без долгих настроек и ошибок.</p>
+      </div>
+      <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=760&q=80" alt="digital team collaboration" class="rounded-xl shadow-lg hidden md:block animate-pulseSlow" data-aos="fade-left"/>
+    </div>
+  </header>
+
+  <!-- WHO DOES WHAT -->
+  <section class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-14" data-aos="fade-up">Кто за что отвечает</h2>
+      <div class="grid md:grid-cols-3 gap-8 text-sm">
+        <!-- Slack -->
+        <div class="bg-gray-50 p-6 rounded-lg shadow" data-aos="fade-up">
+          <h3 class="font-semibold text-asphalt mb-2 flex items-center"><img src="https://a.slack-edge.com/80588/marketing/img/meta/favicon-32.png" class="w-5 h-5 mr-2"> Slack</h3>
+          <ul class="list-disc pl-4 space-y-1">
+            <li>Организация каналов по темам</li>
+            <li>Smart-боты и автоматические напоминания</li>
+            <li>Slash-команды для быстрых действий</li>
+            <li>Поиск всей истории и файлов</li>
+          </ul>
+        </div>
+        <!-- Jira -->
+        <div class="bg-gray-50 p-6 rounded-lg shadow" data-aos="fade-up" data-aos-delay="100">
+          <h3 class="font-semibold text-asphalt mb-2 flex items-center"><img src="https://wac-cdn.atlassian.com/assets/img/favicons/atlassian/favicon.png" class="w-5 h-5 mr-2"> Jira</h3>
+          <ul class="list-disc pl-4 space-y-1">
+            <li>Kanban/Scrum доски под процессы</li>
+            <li>Автоматические workflow и SLA-трекинг</li>
+            <li>Чек-листы и вложения</li>
+            <li>Отчёты по срокам и нагрузке</li>
+          </ul>
+        </div>
+        <!-- Integration -->
+        <div class="bg-gray-50 p-6 rounded-lg shadow" data-aos="fade-up" data-aos-delay="200">
+          <h3 class="font-semibold text-asphalt mb-2 flex items-center">
+            <img src="https://cdn.jsdelivr.net/npm/heroicons@2.0.18/24/solid/arrows-pointing-in.svg" class="w-5 h-5 mr-2"/>
+            Связка Slack ⇄ Jira
+          </h3>
+          <ul class="list-disc pl-4 space-y-1">
+            <li>Создание задачи из Slack одним кликом</li>
+            <li>Уведомления о статусах прямо в чатах</li>
+            <li>Автоматические эскалации при задержках</li>
+            <li>Единая панель для всех процессов</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY US -->
+  <section class="py-20 bg-gray-50" data-aos="fade-up">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-12">Почему мы</h2>
+      <p class="text-center text-sm text-gray-600 mb-8" data-aos="fade-up" data-aos-delay="50">Мы решаем любые задачи автоматизации и интеграции — от простого workflow до масштабных цифровых проектов и многое другое.</p>
+      <div class="grid md:grid-cols-3 gap-8 text-sm">
+        <div class="bg-white p-6 rounded-lg shadow flex flex-col items-center text-center">
+          <img src="https://unpkg.com/heroicons@2.0.18/24/solid/magnifying-glass.svg" class="w-10 h-10 mb-2 text-sky"/>
+          <h4 class="font-semibold mb-1">Анализ процесса</h4>
+          <p>Выявляем узкие места и считаем возможный эффект.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="100">
+          <img src="https://unpkg.com/heroicons@2.0.18/24/solid/wrench-screwdriver.svg" class="w-10 h-10 mb-2 text-sky"/>
+          <h4 class="font-semibold mb-1">Внедрение</h4>
+          <p>Настраиваем Slack, Jira и интеграции под ваш бизнес.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="200">
+          <img src="https://unpkg.com/heroicons@2.0.18/24/solid/academic-cap.svg" class="w-10 h-10 mb-2 text-sky"/>
+          <h4 class="font-semibold mb-1">Обучение & сопровождение</h4>
+          <p>Показываем команде, как работать эффективно, и поддерживаем 30 дней.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- METRICS -->
+  <section class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold mb-12" data-aos="fade-up">Факты в цифрах</h2>
+      <div class="grid md:grid-cols-5 gap-6 text-asphalt">
+        <div data-aos="fade-up"><span class="text-5xl font-bold">−40%</span><p class="text-xs text-gray-700 mt-1">рутинных часов</p></div>
+        <div data-aos="fade-up" data-aos-delay="100"><span class="text-5xl font-bold">×2.5</span><p class="text-xs text-gray-700 mt-1">скорость решений</p></div>
+        <div data-aos="fade-up" data-aos-delay="200"><span class="text-5xl font-bold">−30%</span><p class="text-xs text-gray-700 mt-1">ошибок и брака</p></div>
+        <div data-aos="fade-up" data-aos-delay="300"><span class="text-5xl font-bold">+35%</span><p class="text-xs text-gray-700 mt-1">рост выручки</p></div>
+        <div data-aos="fade-up" data-aos-delay="400"><span class="text-5xl font-bold">90 %</span><p class="text-xs text-gray-700 mt-1">прозрачность процессов</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIGITAL SERVICES -->
+  <section class="py-20 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-up">Дополнительные решения</h2>
+      <p class="text-center text-sm text-gray-600 mb-8" data-aos="fade-up" data-aos-delay="50">Приведены примеры. Мы можем разработать и внедрить любые цифровые решения по запросу клиента.</p>
+      <div class="grid md:grid-cols-3 gap-10 text-sm">
+        <div class="bg-gray-100 p-6 rounded-lg shadow" data-aos="fade-up"><h4 class="font-semibold mb-1">Личный кабинет</h4><p>Удобный портал для клиентов: заявки, статусы, оплата.</p></div>
+        <div class="bg-gray-100 p-6 rounded-lg shadow" data-aos="fade-up" data-aos-delay="100"><h4 class="font-semibold mb-1">Интеграция 1С / ERP</h4><p>Автоматический обмен данными и документооборот.</p></div>
+        <div class="bg-gray-100 p-6 rounded-lg shadow" data-aos="fade-up" data-aos-delay="200"><h4 class="font-semibold mb-1">Скан-бот</h4><p>QR/штрих-коды — моментальная фиксация в Jira и уведомление Slack.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CASES -->
+  <section class="py-20 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-10" data-aos="fade-up">Кейсы</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-white rounded-lg shadow p-6" data-aos="fade-up">
+          <h3 class="font-semibold text-lg mb-1">IMMERSIVO</h3>
+          <p class="text-xs text-gray-600 mb-3">e‑commerce 3D-модели</p>
+          <ul class="list-disc pl-4 text-xs space-y-1">
+            <li>Скорость выпуска ↑ 40 %</li>
+            <li>500 ч/мес высвобождено</li>
+            <li>Полная интеграция Slack + Jira</li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-lg shadow p-6" data-aos="fade-up" data-aos-delay="100">
+          <h3 class="font-semibold text-lg mb-1">Милиметрика</h3>
+          <p class="text-xs text-gray-600 mb-3">дизайн‑подрядчик</p>
+          <ul class="list-disc pl-4 text-xs space-y-1">
+            <li>Смета за 8 ч вместо 3 д.</li>
+            <li>+23 % новых сделок</li>
+            <li>Портал + скан‑бот</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT CTA -->
+  <section class="py-16 bg-asphalt text-white text-center" data-aos="fade-up">
+    <h2 class="text-2xl font-bold mb-2">Хотите подробное КП?</h2>
+    <p class="mb-4">Пришлём детальное коммерческое предложение за 24 часа.</p>
+    <p class="text-lg space-y-2">
+        <a href="tel:+79122001455" class="block underline hover:text-sky">Телефон: +7 912 200 14 55</a>
+        <a href="https://t.me/9122001455" class="block underline hover:text-sky">Telegram</a>
+      </p>
+  </section>
+
+  <footer class="py-6 text-center text-xs text-gray-500">© 2025 Digital Integrations</footer>
+</body>
+</html>
